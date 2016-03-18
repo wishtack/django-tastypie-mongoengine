@@ -721,8 +721,7 @@ class MongoEngineResource(resources.ModelResource):
             kwargs = {
                 'attribute': name,
                 'unique': f.unique or primary_key,
-                'null': not f.required and not primary_key,
-                'help_text': f.help_text,
+                'null': not f.required and not primary_key
             }
 
             # If field is not required, it does not matter if set default value,
